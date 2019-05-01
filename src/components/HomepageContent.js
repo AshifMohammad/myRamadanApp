@@ -8,7 +8,7 @@ import LoginDialog from "./common/Login"
 
 
 
-const HomepageContent = (classes, theme) => {
+const HomepageContent = () => {
     const [isLoginDialogOpen, setLoginDialogOpen] = useState(false)
 
     return (
@@ -17,8 +17,11 @@ const HomepageContent = (classes, theme) => {
                 <IconButton aria-label="Menu" ></IconButton>
                 <Typography variant="h6" color="inherit" >
                     Ramadan App
-          </Typography>
-                <Button style={{ position: "relative", left: "85%" }} color="inherit" onClick={() => { setLoginDialogOpen(!isLoginDialogOpen) }}>Login</Button>
+                </Typography>
+                <div >
+                    <Button color="inherit" onClick={() => { setLoginDialogOpen(!isLoginDialogOpen) }}>Login</Button>
+                </div>
+
             </Toolbar>
         </AppBar>
             <LoginDialog
